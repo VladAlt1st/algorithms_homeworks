@@ -12,13 +12,11 @@ public class Homework_01 {
     }
 
     public static int getIndex(int x, int[] arr) {
-        int index = -1;
         for (int i = 0; i < arr.length; i++) {
             if (x == arr[i]) {
-                index = i;
-                break;
+                return i;
             }
         }
-        return index;
+        return -1;
     }
 }

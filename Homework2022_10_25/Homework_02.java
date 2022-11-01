@@ -16,14 +16,10 @@ public class Homework_02 {
         int element = -1;
         for (int i = 1; i < arr.length; i += 2) {
             if (arr[i] != arr[i - 1]) {
-                element = arr[i - 1];
-                break;
+                return arr[i - 1];
             }
         }
-        if (element == -1 && arr.length % 2 != 0) {
-            element = arr[arr.length - 1];
-        }
-        return element;
+        return arr[arr.length - 1];
     }
 }
 
