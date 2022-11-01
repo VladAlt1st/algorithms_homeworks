@@ -13,12 +13,23 @@ public class Homework_02 {
     }
 
     public static int findSingleElement(int[] arr) {
-        for (int i = 1; i < arr.length; i += 2) {
+        int l = arr.length;
+
+        if (l == 1) {
+            return arr[0];
+        }
+
+        if (arr[l - 2] != arr[l - 1]) {
+            return arr[l - 1];
+        }
+
+        for (int i = 1; i < l; i += 2) {
             if (arr[i] != arr[i - 1]) {
                 return arr[i - 1];
             }
         }
-        return arr[arr.length - 1];
+
+        return -1;
     }
 }
 
